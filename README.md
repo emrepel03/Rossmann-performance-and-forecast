@@ -18,6 +18,7 @@ Emre Pelzer · emrepel03@gmail.com · [LinkedIn](https://www.linkedin.com/in/emr
 - **Accuracy:** **RMSPE 0.1315** (LightGBM) vs **0.1443** (Prophet) on the test window **2015‑06‑20 → 2015‑07‑31**.
 - **Promotion “what‑if” simulator:** Counterfactual baseline vs promo at daily, store level.
 - **Estimated impact:** **~10.29% weighted uplift** across the simulated window (top stores much higher).
+- **Estimated annualized revenue gain:** Model-driven promo allocation could yield ~€15.02M/year additional sales over baseline, based on test window uplift. (See "notebooks/bussiness_impact.ipynb")
 - **Business outputs:** Tableau dashboards (Forecast Viewer, Promo Impact, Model comparison) plus weekly promo action tables.
 
 Color theme: Rossmann Red `#E6001A` (Actual) and Teal `#007F7F` (Predicted).
