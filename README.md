@@ -27,7 +27,7 @@ Color theme: Rossmann Red `#E6001A` (Actual) and Teal `#007F7F` (Predicted).
 ## Screenshots
 
 ![Rossmann Forecast & Promo Impact](reports/figures/db1.png)
-![Rossmann Optimization & Competition ](reports/db2.png)
+![Rossmann Optimization & Competition ](reports/figures/db2.png)
 
 ---
 
