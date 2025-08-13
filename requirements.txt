@@ -1,0 +1,27 @@
+# Core
+numpy
+pandas
+pathlib
+
+# EDA & Plotting
+matplotlib
+seaborn
+
+# Machine Learning
+scikit-learn
+xgboost
+lightgbm
+catboost
+
+# Feature Engineering
+category_encoders
+
+# Date & Time Handling
+holidays
+
+# File Formats
+pyarrow
+fastparquet
+
+# Progress Bars
+tqdm

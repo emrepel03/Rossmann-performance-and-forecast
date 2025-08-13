@@ -1,0 +1,2667 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0514.2217                               -->
+<workbook original-version='18.1' source-build='2025.2.0 (20252.25.0514.2217)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='promo_lift_by_store_day' inline='true' name='federated.147kfrc02sg14d12kqv0e09qb4cw' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='promo_lift_by_store_day' name='textscan.04xnsj71o83yvq18y081x0hfa12c'>
+            <connection class='textscan' directory='/Users/emrepelzer/Desktop/Rossmann_Project/reports/tableau' filename='promo_lift_by_store_day.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.04xnsj71o83yvq18y081x0hfa12c' name='promo_lift_by_store_day.csv' table='[promo_lift_by_store_day#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='integer' name='Store' ordinal='0' />
+            <column datatype='date' name='Date' ordinal='1' />
+            <column datatype='real' name='pred_baseline' ordinal='2' />
+            <column datatype='real' name='pred_with_promo' ordinal='3' />
+            <column datatype='real' name='lift_abs' ordinal='4' />
+            <column datatype='real' name='lift_pct' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[promo_lift_by_store_day.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Store</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Store]</local-name>
+            <parent-name>[promo_lift_by_store_day.csv]</parent-name>
+            <remote-alias>Store</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[promo_lift_by_store_day.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pred_baseline</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pred_baseline]</local-name>
+            <parent-name>[promo_lift_by_store_day.csv]</parent-name>
+            <remote-alias>pred_baseline</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pred_with_promo</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pred_with_promo]</local-name>
+            <parent-name>[promo_lift_by_store_day.csv]</parent-name>
+            <remote-alias>pred_with_promo</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lift_abs</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lift_abs]</local-name>
+            <parent-name>[promo_lift_by_store_day.csv]</parent-name>
+            <remote-alias>lift_abs</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lift_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lift_pct]</local-name>
+            <parent-name>[promo_lift_by_store_day.csv]</parent-name>
+            <remote-alias>lift_pct</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Weighted Uplift %' datatype='real' name='[Calculation_6523464101704474624]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([lift_abs]) / SUM([pred_baseline])' />
+      </column>
+      <column datatype='integer' name='[Store]' role='measure' type='quantitative' />
+      <column caption='promo_lift_by_store_day.csv' datatype='table' name='[__tableau_internal_object_id__].[promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735]' role='measure' type='quantitative' />
+      <column caption='Lift Abs' datatype='real' name='[lift_abs]' role='measure' type='quantitative' />
+      <column caption='Lift Pct' datatype='real' name='[lift_pct]' role='measure' type='quantitative' />
+      <column caption='Pred Baseline' datatype='real' name='[pred_baseline]' role='measure' type='quantitative' />
+      <column caption='Pred With Promo' datatype='real' name='[pred_with_promo]' role='measure' type='quantitative' />
+      <column-instance column='[__tableau_internal_object_id__].[promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Store]' derivation='Sum' name='[sum:Store:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[lift_abs]' derivation='Sum' name='[sum:lift_abs:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[lift_pct]' derivation='Sum' name='[sum:lift_pct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[pred_baseline]' derivation='Sum' name='[sum:pred_baseline:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[pred_with_promo]' derivation='Sum' name='[sum:pred_with_promo:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_6523464101704474624]' derivation='User' name='[usr:Calculation_6523464101704474624:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/qm/tvjk1s9d49d1c9kmlpl2zn900000gn/T/tableau-temp/#TableauTemp_0z31qvr1tlbuw916kko501u4bmwl.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/11/2025 10:00:36 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Store</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Store]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Store</remote-alias>
+              <ordinal>0</ordinal>
+              <family>promo_lift_by_store_day.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>promo_lift_by_store_day.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>42</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pred_baseline</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pred_baseline]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pred_baseline</remote-alias>
+              <ordinal>2</ordinal>
+              <family>promo_lift_by_store_day.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>942</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pred_with_promo</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pred_with_promo]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pred_with_promo</remote-alias>
+              <ordinal>3</ordinal>
+              <family>promo_lift_by_store_day.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>942</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lift_abs</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[lift_abs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lift_abs</remote-alias>
+              <ordinal>4</ordinal>
+              <family>promo_lift_by_store_day.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>568</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lift_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[lift_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lift_pct</remote-alias>
+              <ordinal>5</ordinal>
+              <family>promo_lift_by_store_day.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>568</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.147kfrc02sg14d12kqv0e09qb4cw].[__tableau_internal_object_id__].[cnt:promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735:qk]&quot;</bucket>
+            </map>
+            <map to='#529ee0'>
+              <bucket>&quot;[federated.147kfrc02sg14d12kqv0e09qb4cw].[sum:pred_baseline:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.147kfrc02sg14d12kqv0e09qb4cw].[usr:Calculation_6523464101704474624:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.147kfrc02sg14d12kqv0e09qb4cw].[sum:lift_pct:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.147kfrc02sg14d12kqv0e09qb4cw].[sum:Store:qk]&quot;</bucket>
+            </map>
+            <map to='#ef6f6a'>
+              <bucket>&quot;[federated.147kfrc02sg14d12kqv0e09qb4cw].[sum:pred_with_promo:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.147kfrc02sg14d12kqv0e09qb4cw].[sum:lift_abs:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='promo_lift_by_store_day.csv' id='promo_lift_by_store_day.csv_A7377E0A4D144B7DA82D953D72731735'>
+            <properties context=''>
+              <relation connection='textscan.04xnsj71o83yvq18y081x0hfa12c' name='promo_lift_by_store_day.csv' table='[promo_lift_by_store_day#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='integer' name='Store' ordinal='0' />
+                  <column datatype='date' name='Date' ordinal='1' />
+                  <column datatype='real' name='pred_baseline' ordinal='2' />
+                  <column datatype='real' name='pred_with_promo' ordinal='3' />
+                  <column datatype='real' name='lift_abs' ordinal='4' />
+                  <column datatype='real' name='lift_pct' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='by_store_compare' inline='true' name='federated.1pc5h110qr29x41cq6eex1yjlngi' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='by_store_compare' name='textscan.0wpzgj00uueabz1033pvg0z4acie'>
+            <connection class='textscan' directory='/Users/emrepelzer/Desktop/Rossmann_Project/reports/tableau' filename='by_store_compare.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0wpzgj00uueabz1033pvg0z4acie' name='by_store_compare.csv' table='[by_store_compare#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='integer' name='Store' ordinal='0' />
+            <column datatype='real' name='rmspe_lgbm' ordinal='1' />
+            <column datatype='real' name='rmspe_prophet' ordinal='2' />
+            <column datatype='real' name='rmse_lgbm' ordinal='3' />
+            <column datatype='real' name='rmse_prophet' ordinal='4' />
+            <column datatype='real' name='mape_lgbm' ordinal='5' />
+            <column datatype='real' name='mape_prophet' ordinal='6' />
+            <column datatype='string' name='winner' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[by_store_compare.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Store</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Store]</local-name>
+            <parent-name>[by_store_compare.csv]</parent-name>
+            <remote-alias>Store</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rmspe_lgbm</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rmspe_lgbm]</local-name>
+            <parent-name>[by_store_compare.csv]</parent-name>
+            <remote-alias>rmspe_lgbm</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rmspe_prophet</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rmspe_prophet]</local-name>
+            <parent-name>[by_store_compare.csv]</parent-name>
+            <remote-alias>rmspe_prophet</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rmse_lgbm</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rmse_lgbm]</local-name>
+            <parent-name>[by_store_compare.csv]</parent-name>
+            <remote-alias>rmse_lgbm</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rmse_prophet</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rmse_prophet]</local-name>
+            <parent-name>[by_store_compare.csv]</parent-name>
+            <remote-alias>rmse_prophet</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mape_lgbm</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mape_lgbm]</local-name>
+            <parent-name>[by_store_compare.csv]</parent-name>
+            <remote-alias>mape_lgbm</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mape_prophet</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mape_prophet]</local-name>
+            <parent-name>[by_store_compare.csv]</parent-name>
+            <remote-alias>mape_prophet</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>winner</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[winner]</local-name>
+            <parent-name>[by_store_compare.csv]</parent-name>
+            <remote-alias>winner</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Store]' role='measure' type='quantitative' />
+      <column caption='by_store_compare.csv' datatype='table' name='[__tableau_internal_object_id__].[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]' role='measure' type='quantitative' />
+      <column caption='Mape Lgbm' datatype='real' name='[mape_lgbm]' role='measure' type='quantitative' />
+      <column caption='Mape Prophet' datatype='real' name='[mape_prophet]' role='measure' type='quantitative' />
+      <column caption='Rmse Lgbm' datatype='real' name='[rmse_lgbm]' role='measure' type='quantitative' />
+      <column caption='Rmse Prophet' datatype='real' name='[rmse_prophet]' role='measure' type='quantitative' />
+      <column caption='Rmspe Lgbm' datatype='real' name='[rmspe_lgbm]' role='measure' type='quantitative' />
+      <column caption='Rmspe Prophet' datatype='real' name='[rmspe_prophet]' role='measure' type='quantitative' />
+      <column caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+      <column-instance column='[__tableau_internal_object_id__].[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Store]' derivation='Sum' name='[sum:Store:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[mape_lgbm]' derivation='Sum' name='[sum:mape_lgbm:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[mape_prophet]' derivation='Sum' name='[sum:mape_prophet:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[rmse_lgbm]' derivation='Sum' name='[sum:rmse_lgbm:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[rmse_prophet]' derivation='Sum' name='[sum:rmse_prophet:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[rmspe_lgbm]' derivation='Sum' name='[sum:rmspe_lgbm:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[rmspe_prophet]' derivation='Sum' name='[sum:rmspe_prophet:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/qm/tvjk1s9d49d1c9kmlpl2zn900000gn/T/tableau-temp/#TableauTemp_0jfwxen16lphm511bzbyq1cd0y7w.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/11/2025 10:00:57 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Store</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Store]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Store</remote-alias>
+              <ordinal>0</ordinal>
+              <family>by_store_compare.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1115</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rmspe_lgbm</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rmspe_lgbm]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rmspe_lgbm</remote-alias>
+              <ordinal>1</ordinal>
+              <family>by_store_compare.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1115</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rmspe_prophet</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rmspe_prophet]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rmspe_prophet</remote-alias>
+              <ordinal>2</ordinal>
+              <family>by_store_compare.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1115</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rmse_lgbm</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rmse_lgbm]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rmse_lgbm</remote-alias>
+              <ordinal>3</ordinal>
+              <family>by_store_compare.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1115</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rmse_prophet</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rmse_prophet]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rmse_prophet</remote-alias>
+              <ordinal>4</ordinal>
+              <family>by_store_compare.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1115</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mape_lgbm</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[mape_lgbm]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mape_lgbm</remote-alias>
+              <ordinal>5</ordinal>
+              <family>by_store_compare.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1115</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mape_prophet</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[mape_prophet]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mape_prophet</remote-alias>
+              <ordinal>6</ordinal>
+              <family>by_store_compare.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1115</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>winner</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[winner]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>winner</remote-alias>
+              <ordinal>7</ordinal>
+              <family>by_store_compare.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1pc5h110qr29x41cq6eex1yjlngi].[__tableau_internal_object_id__].[cnt:by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1pc5h110qr29x41cq6eex1yjlngi].[sum:rmse_prophet:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1pc5h110qr29x41cq6eex1yjlngi].[sum:rmse_lgbm:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.1pc5h110qr29x41cq6eex1yjlngi].[sum:rmspe_prophet:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1pc5h110qr29x41cq6eex1yjlngi].[sum:mape_prophet:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.1pc5h110qr29x41cq6eex1yjlngi].[sum:rmspe_lgbm:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1pc5h110qr29x41cq6eex1yjlngi].[sum:mape_lgbm:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[federated.1pc5h110qr29x41cq6eex1yjlngi].[sum:Store:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='by_store_compare.csv' id='by_store_compare.csv_4D5576B1CA684B49B9B95629E6C2EF1A'>
+            <properties context=''>
+              <relation connection='textscan.0wpzgj00uueabz1033pvg0z4acie' name='by_store_compare.csv' table='[by_store_compare#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='integer' name='Store' ordinal='0' />
+                  <column datatype='real' name='rmspe_lgbm' ordinal='1' />
+                  <column datatype='real' name='rmspe_prophet' ordinal='2' />
+                  <column datatype='real' name='rmse_lgbm' ordinal='3' />
+                  <column datatype='real' name='rmse_prophet' ordinal='4' />
+                  <column datatype='real' name='mape_lgbm' ordinal='5' />
+                  <column datatype='real' name='mape_prophet' ordinal='6' />
+                  <column datatype='string' name='winner' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='overall_summary' inline='true' name='federated.0g2uilu0jq6p2h18su8n607rqvdi' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='overall_summary' name='textscan.0ukiwpn1o1o7y110k7c101gst4h9'>
+            <connection class='textscan' directory='/Users/emrepelzer/Desktop/Rossmann_Project/reports/tableau' filename='overall_summary.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0ukiwpn1o1o7y110k7c101gst4h9' name='overall_summary.csv' table='[overall_summary#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='string' name='model' ordinal='0' />
+            <column datatype='real' name='rmspe' ordinal='1' />
+            <column datatype='real' name='rmse' ordinal='2' />
+            <column datatype='real' name='mape' ordinal='3' />
+            <column datatype='date' name='test_start' ordinal='4' />
+            <column datatype='date' name='test_end' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[overall_summary.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>model</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[model]</local-name>
+            <parent-name>[overall_summary.csv]</parent-name>
+            <remote-alias>model</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rmspe</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rmspe]</local-name>
+            <parent-name>[overall_summary.csv]</parent-name>
+            <remote-alias>rmspe</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rmse</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rmse]</local-name>
+            <parent-name>[overall_summary.csv]</parent-name>
+            <remote-alias>rmse</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mape</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mape]</local-name>
+            <parent-name>[overall_summary.csv]</parent-name>
+            <remote-alias>mape</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>test_start</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[test_start]</local-name>
+            <parent-name>[overall_summary.csv]</parent-name>
+            <remote-alias>test_start</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>test_end</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[test_end]</local-name>
+            <parent-name>[overall_summary.csv]</parent-name>
+            <remote-alias>test_end</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='overall_summary.csv' datatype='table' name='[__tableau_internal_object_id__].[overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F]' role='measure' type='quantitative' />
+      <column caption='Mape' datatype='real' name='[mape]' role='measure' type='quantitative' />
+      <column caption='Model' datatype='string' name='[model]' role='dimension' type='nominal' />
+      <column caption='Rmse' datatype='real' name='[rmse]' role='measure' type='quantitative' />
+      <column caption='Rmspe' datatype='real' name='[rmspe]' role='measure' type='quantitative' />
+      <column caption='Test End' datatype='date' name='[test_end]' role='dimension' type='ordinal' />
+      <column caption='Test Start' datatype='date' name='[test_start]' role='dimension' type='ordinal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/qm/tvjk1s9d49d1c9kmlpl2zn900000gn/T/tableau-temp/#TableauTemp_0a7w4m20dfer7112x4w7k0yaxfcp.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/11/2025 10:01:06 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>model</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[model]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>model</remote-alias>
+              <ordinal>0</ordinal>
+              <family>overall_summary.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rmspe</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rmspe]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rmspe</remote-alias>
+              <ordinal>1</ordinal>
+              <family>overall_summary.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rmse</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[rmse]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rmse</remote-alias>
+              <ordinal>2</ordinal>
+              <family>overall_summary.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mape</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[mape]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mape</remote-alias>
+              <ordinal>3</ordinal>
+              <family>overall_summary.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>test_start</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[test_start]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>test_start</remote-alias>
+              <ordinal>4</ordinal>
+              <family>overall_summary.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>test_end</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[test_end]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>test_end</remote-alias>
+              <ordinal>5</ordinal>
+              <family>overall_summary.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='overall_summary.csv' id='overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F'>
+            <properties context=''>
+              <relation connection='textscan.0ukiwpn1o1o7y110k7c101gst4h9' name='overall_summary.csv' table='[overall_summary#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='string' name='model' ordinal='0' />
+                  <column datatype='real' name='rmspe' ordinal='1' />
+                  <column datatype='real' name='rmse' ordinal='2' />
+                  <column datatype='real' name='mape' ordinal='3' />
+                  <column datatype='date' name='test_start' ordinal='4' />
+                  <column datatype='date' name='test_end' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='promo_actions' inline='true' name='federated.195n6cy0lup8yn19samw415vroly' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='promo_actions' name='textscan.0olie8e13743fo153l2ya1642w4q'>
+            <connection class='textscan' directory='/Users/emrepelzer/Desktop/Rossmann_Project/reports/portfolio' filename='promo_actions.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0olie8e13743fo153l2ya1642w4q' name='promo_actions.csv' table='[promo_actions#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='integer' name='Store' ordinal='0' />
+            <column datatype='integer' name='days' ordinal='1' />
+            <column datatype='real' name='lift_total' ordinal='2' />
+            <column datatype='real' name='lift_pct_mean' ordinal='3' />
+            <column datatype='real' name='baseline_sum' ordinal='4' />
+            <column datatype='integer' name='neg_days' ordinal='5' />
+            <column datatype='real' name='weighted_pct' ordinal='6' />
+            <column datatype='string' name='recommendation' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Store</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Store]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>Store</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>days</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[days]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>days</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lift_total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lift_total]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>lift_total</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lift_pct_mean</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lift_pct_mean]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>lift_pct_mean</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>baseline_sum</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[baseline_sum]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>baseline_sum</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neg_days</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[neg_days]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>neg_days</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weighted_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[weighted_pct]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>weighted_pct</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>recommendation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[recommendation]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>recommendation</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='promo_actions.csv' datatype='table' name='[__tableau_internal_object_id__].[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]' role='measure' type='quantitative' />
+      <column caption='Baseline Sum' datatype='real' name='[baseline_sum]' role='measure' type='quantitative' />
+      <column caption='Days' datatype='integer' name='[days]' role='measure' type='quantitative' />
+      <column caption='Lift Pct Mean' datatype='real' name='[lift_pct_mean]' role='measure' type='quantitative' />
+      <column caption='Lift Total' datatype='real' name='[lift_total]' role='measure' type='quantitative' />
+      <column caption='Neg Days' datatype='integer' name='[neg_days]' role='measure' type='quantitative' />
+      <column caption='Recommendation' datatype='string' name='[recommendation]' role='dimension' type='nominal' />
+      <column caption='Weighted Pct' datatype='real' name='[weighted_pct]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/qm/tvjk1s9d49d1c9kmlpl2zn900000gn/T/tableau-temp/#TableauTemp_1peits00i9fldz12vpxdm17taphi.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/11/2025 10:01:15 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Store</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Store]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Store</remote-alias>
+              <ordinal>0</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>days</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[days]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>days</remote-alias>
+              <ordinal>1</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lift_total</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[lift_total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lift_total</remote-alias>
+              <ordinal>2</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lift_pct_mean</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[lift_pct_mean]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>lift_pct_mean</remote-alias>
+              <ordinal>3</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>baseline_sum</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[baseline_sum]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>baseline_sum</remote-alias>
+              <ordinal>4</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>neg_days</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[neg_days]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>neg_days</remote-alias>
+              <ordinal>5</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>weighted_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[weighted_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>weighted_pct</remote-alias>
+              <ordinal>6</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>recommendation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[recommendation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>recommendation</remote-alias>
+              <ordinal>7</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='promo_actions.csv' id='promo_actions.csv_54EB41732AB24FC09CCFB98776A4497C'>
+            <properties context=''>
+              <relation connection='textscan.0olie8e13743fo153l2ya1642w4q' name='promo_actions.csv' table='[promo_actions#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='integer' name='Store' ordinal='0' />
+                  <column datatype='integer' name='days' ordinal='1' />
+                  <column datatype='real' name='lift_total' ordinal='2' />
+                  <column datatype='real' name='lift_pct_mean' ordinal='3' />
+                  <column datatype='real' name='baseline_sum' ordinal='4' />
+                  <column datatype='integer' name='neg_days' ordinal='5' />
+                  <column datatype='real' name='weighted_pct' ordinal='6' />
+                  <column datatype='string' name='recommendation' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='high_demand_weeks' inline='true' name='federated.0nj4tpp0hxgbus150pxqp1f5lw5w' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='high_demand_weeks' name='textscan.0klne3u1q2ipu91234cf5016wmq8'>
+            <connection class='textscan' directory='/Users/emrepelzer/Desktop/Rossmann_Project/reports/portfolio' filename='high_demand_weeks.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0klne3u1q2ipu91234cf5016wmq8' name='high_demand_weeks.csv' table='[high_demand_weeks#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='integer' name='Store' ordinal='0' />
+            <column datatype='date' name='week_start' ordinal='1' />
+            <column datatype='real' name='pred_sum' ordinal='2' />
+            <column datatype='real' name='store_pct' ordinal='3' />
+            <column datatype='string' name='demand_flag' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[high_demand_weeks.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Store</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Store]</local-name>
+            <parent-name>[high_demand_weeks.csv]</parent-name>
+            <remote-alias>Store</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[high_demand_weeks.csv_215591B2AE7A4B3287C24D8ACDC54BEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>week_start</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[week_start]</local-name>
+            <parent-name>[high_demand_weeks.csv]</parent-name>
+            <remote-alias>week_start</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[high_demand_weeks.csv_215591B2AE7A4B3287C24D8ACDC54BEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pred_sum</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pred_sum]</local-name>
+            <parent-name>[high_demand_weeks.csv]</parent-name>
+            <remote-alias>pred_sum</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[high_demand_weeks.csv_215591B2AE7A4B3287C24D8ACDC54BEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>store_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[store_pct]</local-name>
+            <parent-name>[high_demand_weeks.csv]</parent-name>
+            <remote-alias>store_pct</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[high_demand_weeks.csv_215591B2AE7A4B3287C24D8ACDC54BEB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>demand_flag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[demand_flag]</local-name>
+            <parent-name>[high_demand_weeks.csv]</parent-name>
+            <remote-alias>demand_flag</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[high_demand_weeks.csv_215591B2AE7A4B3287C24D8ACDC54BEB]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='high_demand_weeks.csv' datatype='table' name='[__tableau_internal_object_id__].[high_demand_weeks.csv_215591B2AE7A4B3287C24D8ACDC54BEB]' role='measure' type='quantitative' />
+      <column caption='Demand Flag' datatype='string' name='[demand_flag]' role='dimension' type='nominal' />
+      <column caption='Pred Sum' datatype='real' name='[pred_sum]' role='measure' type='quantitative' />
+      <column caption='Store Pct' datatype='real' name='[store_pct]' role='measure' type='quantitative' />
+      <column caption='Week Start' datatype='date' name='[week_start]' role='dimension' type='ordinal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/qm/tvjk1s9d49d1c9kmlpl2zn900000gn/T/tableau-temp/#TableauTemp_0bd57200xrjxh910vtkrx09ksvid.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/11/2025 10:01:23 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Store</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Store]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Store</remote-alias>
+              <ordinal>0</ordinal>
+              <family>high_demand_weeks.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1466</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[high_demand_weeks.csv_215591B2AE7A4B3287C24D8ACDC54BEB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>week_start</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[week_start]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>week_start</remote-alias>
+              <ordinal>1</ordinal>
+              <family>high_demand_weeks.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[high_demand_weeks.csv_215591B2AE7A4B3287C24D8ACDC54BEB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pred_sum</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pred_sum]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>pred_sum</remote-alias>
+              <ordinal>2</ordinal>
+              <family>high_demand_weeks.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7798</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[high_demand_weeks.csv_215591B2AE7A4B3287C24D8ACDC54BEB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>store_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[store_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>store_pct</remote-alias>
+              <ordinal>3</ordinal>
+              <family>high_demand_weeks.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[high_demand_weeks.csv_215591B2AE7A4B3287C24D8ACDC54BEB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>demand_flag</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[demand_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>demand_flag</remote-alias>
+              <ordinal>4</ordinal>
+              <family>high_demand_weeks.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[high_demand_weeks.csv_215591B2AE7A4B3287C24D8ACDC54BEB]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='high_demand_weeks.csv' id='high_demand_weeks.csv_215591B2AE7A4B3287C24D8ACDC54BEB'>
+            <properties context=''>
+              <relation connection='textscan.0klne3u1q2ipu91234cf5016wmq8' name='high_demand_weeks.csv' table='[high_demand_weeks#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='integer' name='Store' ordinal='0' />
+                  <column datatype='date' name='week_start' ordinal='1' />
+                  <column datatype='real' name='pred_sum' ordinal='2' />
+                  <column datatype='real' name='store_pct' ordinal='3' />
+                  <column datatype='string' name='demand_flag' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='competition_hotspots' inline='true' name='federated.1fwo2fb0yx9gx71g6zxlh19skqq8' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='competition_hotspots' name='textscan.088w22j08eptgc1bjpuh6037go22'>
+            <connection class='textscan' directory='/Users/emrepelzer/Desktop/Rossmann_Project/reports/portfolio' filename='competition_hotspots.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.088w22j08eptgc1bjpuh6037go22' name='competition_hotspots.csv' table='[competition_hotspots#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='integer' name='Store' ordinal='0' />
+            <column datatype='real' name='CompetitionDistance' ordinal='1' />
+            <column datatype='real' name='MonthsSinceCompOpen' ordinal='2' />
+            <column datatype='real' name='dist_score' ordinal='3' />
+            <column datatype='real' name='recency_score' ordinal='4' />
+            <column datatype='real' name='risk_score' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[competition_hotspots.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Store</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Store]</local-name>
+            <parent-name>[competition_hotspots.csv]</parent-name>
+            <remote-alias>Store</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[competition_hotspots.csv_F46605A5C56048DF8172E9AEC47437A7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CompetitionDistance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CompetitionDistance]</local-name>
+            <parent-name>[competition_hotspots.csv]</parent-name>
+            <remote-alias>CompetitionDistance</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[competition_hotspots.csv_F46605A5C56048DF8172E9AEC47437A7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MonthsSinceCompOpen</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MonthsSinceCompOpen]</local-name>
+            <parent-name>[competition_hotspots.csv]</parent-name>
+            <remote-alias>MonthsSinceCompOpen</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[competition_hotspots.csv_F46605A5C56048DF8172E9AEC47437A7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dist_score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[dist_score]</local-name>
+            <parent-name>[competition_hotspots.csv]</parent-name>
+            <remote-alias>dist_score</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[competition_hotspots.csv_F46605A5C56048DF8172E9AEC47437A7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>recency_score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[recency_score]</local-name>
+            <parent-name>[competition_hotspots.csv]</parent-name>
+            <remote-alias>recency_score</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[competition_hotspots.csv_F46605A5C56048DF8172E9AEC47437A7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>risk_score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[risk_score]</local-name>
+            <parent-name>[competition_hotspots.csv]</parent-name>
+            <remote-alias>risk_score</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[competition_hotspots.csv_F46605A5C56048DF8172E9AEC47437A7]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Competition Distance' datatype='real' name='[CompetitionDistance]' role='measure' type='quantitative' />
+      <column caption='Months Since Comp Open' datatype='real' name='[MonthsSinceCompOpen]' role='measure' type='quantitative' />
+      <column caption='competition_hotspots.csv' datatype='table' name='[__tableau_internal_object_id__].[competition_hotspots.csv_F46605A5C56048DF8172E9AEC47437A7]' role='measure' type='quantitative' />
+      <column caption='Dist Score' datatype='real' name='[dist_score]' role='measure' type='quantitative' />
+      <column caption='Recency Score' datatype='real' name='[recency_score]' role='measure' type='quantitative' />
+      <column caption='Risk Score' datatype='real' name='[risk_score]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/qm/tvjk1s9d49d1c9kmlpl2zn900000gn/T/tableau-temp/#TableauTemp_0ielfd308g8kjr14mwa2o12j8uex.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/11/2025 10:03:59 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Store</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Store]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Store</remote-alias>
+              <ordinal>0</ordinal>
+              <family>competition_hotspots.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1115</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[competition_hotspots.csv_F46605A5C56048DF8172E9AEC47437A7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CompetitionDistance</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[CompetitionDistance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CompetitionDistance</remote-alias>
+              <ordinal>1</ordinal>
+              <family>competition_hotspots.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>625</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[competition_hotspots.csv_F46605A5C56048DF8172E9AEC47437A7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MonthsSinceCompOpen</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[MonthsSinceCompOpen]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MonthsSinceCompOpen</remote-alias>
+              <ordinal>2</ordinal>
+              <family>competition_hotspots.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>325</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[competition_hotspots.csv_F46605A5C56048DF8172E9AEC47437A7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dist_score</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[dist_score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>dist_score</remote-alias>
+              <ordinal>3</ordinal>
+              <family>competition_hotspots.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>580</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[competition_hotspots.csv_F46605A5C56048DF8172E9AEC47437A7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>recency_score</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[recency_score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>recency_score</remote-alias>
+              <ordinal>4</ordinal>
+              <family>competition_hotspots.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>308</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[competition_hotspots.csv_F46605A5C56048DF8172E9AEC47437A7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>risk_score</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[risk_score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>risk_score</remote-alias>
+              <ordinal>5</ordinal>
+              <family>competition_hotspots.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1020</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[competition_hotspots.csv_F46605A5C56048DF8172E9AEC47437A7]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='competition_hotspots.csv' id='competition_hotspots.csv_F46605A5C56048DF8172E9AEC47437A7'>
+            <properties context=''>
+              <relation connection='textscan.088w22j08eptgc1bjpuh6037go22' name='competition_hotspots.csv' table='[competition_hotspots#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='integer' name='Store' ordinal='0' />
+                  <column datatype='real' name='CompetitionDistance' ordinal='1' />
+                  <column datatype='real' name='MonthsSinceCompOpen' ordinal='2' />
+                  <column datatype='real' name='dist_score' ordinal='3' />
+                  <column datatype='real' name='recency_score' ordinal='4' />
+                  <column datatype='real' name='risk_score' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='test_predictions' inline='true' name='federated.0b71w4t0lfd78114jfuvm1ahnn0y' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='test_predictions' name='textscan.1thvqw914vv3dv16912w30zsbchy'>
+            <connection class='textscan' directory='/Users/emrepelzer/Desktop/Rossmann_Project/reports/tableau' filename='test_predictions.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='promo_actions' name='textscan.1q702t71v7jn9v16xlcre05qqprx'>
+            <connection class='textscan' directory='/Users/emrepelzer/Desktop/Rossmann_Project/reports/portfolio' filename='promo_actions.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.1thvqw914vv3dv16912w30zsbchy' name='test_predictions.csv' table='[test_predictions#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+              <column datatype='integer' name='Store' ordinal='0' />
+              <column datatype='date' name='Date' ordinal='1' />
+              <column datatype='real' name='y_true' ordinal='2' />
+              <column datatype='real' name='y_pred' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1q702t71v7jn9v16xlcre05qqprx' name='promo_actions.csv' table='[promo_actions#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+              <column datatype='integer' name='Store' ordinal='0' />
+              <column datatype='integer' name='days' ordinal='1' />
+              <column datatype='real' name='lift_total' ordinal='2' />
+              <column datatype='real' name='lift_pct_mean' ordinal='3' />
+              <column datatype='real' name='baseline_sum' ordinal='4' />
+              <column datatype='integer' name='neg_days' ordinal='5' />
+              <column datatype='real' name='weighted_pct' ordinal='6' />
+              <column datatype='string' name='recommendation' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1thvqw914vv3dv16912w30zsbchy' name='promo_lift_by_store_day.csv' table='[promo_lift_by_store_day#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+              <column datatype='integer' name='Store' ordinal='0' />
+              <column datatype='date' name='Date' ordinal='1' />
+              <column datatype='real' name='pred_baseline' ordinal='2' />
+              <column datatype='real' name='pred_with_promo' ordinal='3' />
+              <column datatype='real' name='lift_abs' ordinal='4' />
+              <column datatype='real' name='lift_pct' ordinal='5' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Date (promo_lift_by_store_day.csv)]' value='[promo_lift_by_store_day.csv].[Date]' />
+          <map key='[Date]' value='[test_predictions.csv].[Date]' />
+          <map key='[Store (promo_actions.csv)]' value='[promo_actions.csv].[Store]' />
+          <map key='[Store (promo_lift_by_store_day.csv)]' value='[promo_lift_by_store_day.csv].[Store]' />
+          <map key='[Store]' value='[test_predictions.csv].[Store]' />
+          <map key='[baseline_sum]' value='[promo_actions.csv].[baseline_sum]' />
+          <map key='[days]' value='[promo_actions.csv].[days]' />
+          <map key='[lift_abs]' value='[promo_lift_by_store_day.csv].[lift_abs]' />
+          <map key='[lift_pct]' value='[promo_lift_by_store_day.csv].[lift_pct]' />
+          <map key='[lift_pct_mean]' value='[promo_actions.csv].[lift_pct_mean]' />
+          <map key='[lift_total]' value='[promo_actions.csv].[lift_total]' />
+          <map key='[neg_days]' value='[promo_actions.csv].[neg_days]' />
+          <map key='[pred_baseline]' value='[promo_lift_by_store_day.csv].[pred_baseline]' />
+          <map key='[pred_with_promo]' value='[promo_lift_by_store_day.csv].[pred_with_promo]' />
+          <map key='[recommendation]' value='[promo_actions.csv].[recommendation]' />
+          <map key='[weighted_pct]' value='[promo_actions.csv].[weighted_pct]' />
+          <map key='[y_pred]' value='[test_predictions.csv].[y_pred]' />
+          <map key='[y_true]' value='[test_predictions.csv].[y_true]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[test_predictions.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[promo_lift_by_store_day.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Store</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Store]</local-name>
+            <parent-name>[test_predictions.csv]</parent-name>
+            <remote-alias>Store</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[test_predictions.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>y_true</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[y_true]</local-name>
+            <parent-name>[test_predictions.csv]</parent-name>
+            <remote-alias>y_true</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>y_pred</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[y_pred]</local-name>
+            <parent-name>[test_predictions.csv]</parent-name>
+            <remote-alias>y_pred</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Store</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Store (promo_actions.csv)]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>Store</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>days</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[days]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>days</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lift_total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lift_total]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>lift_total</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lift_pct_mean</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lift_pct_mean]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>lift_pct_mean</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>baseline_sum</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[baseline_sum]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>baseline_sum</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neg_days</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[neg_days]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>neg_days</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weighted_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[weighted_pct]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>weighted_pct</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>recommendation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[recommendation]</local-name>
+            <parent-name>[promo_actions.csv]</parent-name>
+            <remote-alias>recommendation</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Store</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Store (promo_lift_by_store_day.csv)]</local-name>
+            <parent-name>[promo_lift_by_store_day.csv]</parent-name>
+            <remote-alias>Store</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date (promo_lift_by_store_day.csv)]</local-name>
+            <parent-name>[promo_lift_by_store_day.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pred_baseline</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pred_baseline]</local-name>
+            <parent-name>[promo_lift_by_store_day.csv]</parent-name>
+            <remote-alias>pred_baseline</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pred_with_promo</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pred_with_promo]</local-name>
+            <parent-name>[promo_lift_by_store_day.csv]</parent-name>
+            <remote-alias>pred_with_promo</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lift_abs</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lift_abs]</local-name>
+            <parent-name>[promo_lift_by_store_day.csv]</parent-name>
+            <remote-alias>lift_abs</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lift_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lift_pct]</local-name>
+            <parent-name>[promo_lift_by_store_day.csv]</parent-name>
+            <remote-alias>lift_pct</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Date (promo lift by store day.csv)' datatype='date' name='[Date (promo_lift_by_store_day.csv)]' role='dimension' type='ordinal' />
+      <column caption='Store (promo actions.csv)' datatype='integer' name='[Store (promo_actions.csv)]' role='measure' type='quantitative' />
+      <column caption='Store (promo lift by store day.csv)' datatype='integer' name='[Store (promo_lift_by_store_day.csv)]' role='measure' type='quantitative' />
+      <column caption='promo_actions.csv' datatype='table' name='[__tableau_internal_object_id__].[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]' role='measure' type='quantitative' />
+      <column caption='promo_lift_by_store_day.csv' datatype='table' name='[__tableau_internal_object_id__].[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]' role='measure' type='quantitative' />
+      <column caption='test_predictions.csv' datatype='table' name='[__tableau_internal_object_id__].[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839]' role='measure' type='quantitative' />
+      <column caption='Baseline Sum' datatype='real' name='[baseline_sum]' role='measure' type='quantitative' />
+      <column caption='Days' datatype='integer' name='[days]' role='measure' type='quantitative' />
+      <column caption='Lift Abs' datatype='real' name='[lift_abs]' role='measure' type='quantitative' />
+      <column caption='Lift Pct' datatype='real' name='[lift_pct]' role='measure' type='quantitative' />
+      <column caption='Lift Pct Mean' datatype='real' name='[lift_pct_mean]' role='measure' type='quantitative' />
+      <column caption='Lift Total' datatype='real' name='[lift_total]' role='measure' type='quantitative' />
+      <column caption='Neg Days' datatype='integer' name='[neg_days]' role='measure' type='quantitative' />
+      <column caption='Pred Baseline' datatype='real' name='[pred_baseline]' role='measure' type='quantitative' />
+      <column caption='Pred With Promo' datatype='real' name='[pred_with_promo]' role='measure' type='quantitative' />
+      <column caption='Recommendation' datatype='string' name='[recommendation]' role='dimension' type='nominal' />
+      <column caption='Weighted Pct' datatype='real' name='[weighted_pct]' role='measure' type='quantitative' />
+      <column caption='Y Pred' datatype='real' name='[y_pred]' role='measure' type='quantitative' />
+      <column caption='Y True' datatype='real' name='[y_true]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/qm/tvjk1s9d49d1c9kmlpl2zn900000gn/T/tableau-temp/#TableauTemp_0q2q8s30qizj221covaow1yj7tz0.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/11/2025 10:08:22 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839' table='[Extract].[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839]' type='table' />
+            <relation name='promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A' table='[Extract].[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]' type='table' />
+            <relation name='promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE' table='[Extract].[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Date (promo_lift_by_store_day.csv)]' value='[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE].[Date]' />
+            <map key='[Date]' value='[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839].[Date]' />
+            <map key='[Store (promo_actions.csv)]' value='[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A].[Store]' />
+            <map key='[Store (promo_lift_by_store_day.csv)]' value='[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE].[Store]' />
+            <map key='[Store]' value='[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839].[Store]' />
+            <map key='[baseline_sum]' value='[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A].[baseline_sum]' />
+            <map key='[days]' value='[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A].[days]' />
+            <map key='[lift_abs]' value='[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE].[lift_abs]' />
+            <map key='[lift_pct]' value='[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE].[lift_pct]' />
+            <map key='[lift_pct_mean]' value='[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A].[lift_pct_mean]' />
+            <map key='[lift_total]' value='[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A].[lift_total]' />
+            <map key='[neg_days]' value='[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A].[neg_days]' />
+            <map key='[pred_baseline]' value='[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE].[pred_baseline]' />
+            <map key='[pred_with_promo]' value='[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE].[pred_with_promo]' />
+            <map key='[recommendation]' value='[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A].[recommendation]' />
+            <map key='[weighted_pct]' value='[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A].[weighted_pct]' />
+            <map key='[y_pred]' value='[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839].[y_pred]' />
+            <map key='[y_true]' value='[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839].[y_true]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Store</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Store]</local-name>
+              <parent-name>[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839]</parent-name>
+              <remote-alias>Store</remote-alias>
+              <ordinal>0</ordinal>
+              <family>test_predictions.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2680</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>test_predictions.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>54</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>y_true</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[y_true]</local-name>
+              <parent-name>[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839]</parent-name>
+              <remote-alias>y_true</remote-alias>
+              <ordinal>2</ordinal>
+              <family>test_predictions.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10132</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>y_pred</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[y_pred]</local-name>
+              <parent-name>[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839]</parent-name>
+              <remote-alias>y_pred</remote-alias>
+              <ordinal>3</ordinal>
+              <family>test_predictions.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>40282</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Store</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Store (promo_actions.csv)]</local-name>
+              <parent-name>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</parent-name>
+              <remote-alias>Store</remote-alias>
+              <ordinal>4</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>days</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[days]</local-name>
+              <parent-name>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</parent-name>
+              <remote-alias>days</remote-alias>
+              <ordinal>5</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lift_total</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[lift_total]</local-name>
+              <parent-name>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</parent-name>
+              <remote-alias>lift_total</remote-alias>
+              <ordinal>6</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lift_pct_mean</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[lift_pct_mean]</local-name>
+              <parent-name>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</parent-name>
+              <remote-alias>lift_pct_mean</remote-alias>
+              <ordinal>7</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>baseline_sum</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[baseline_sum]</local-name>
+              <parent-name>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</parent-name>
+              <remote-alias>baseline_sum</remote-alias>
+              <ordinal>8</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>neg_days</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[neg_days]</local-name>
+              <parent-name>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</parent-name>
+              <remote-alias>neg_days</remote-alias>
+              <ordinal>9</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>weighted_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[weighted_pct]</local-name>
+              <parent-name>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</parent-name>
+              <remote-alias>weighted_pct</remote-alias>
+              <ordinal>10</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>recommendation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[recommendation]</local-name>
+              <parent-name>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</parent-name>
+              <remote-alias>recommendation</remote-alias>
+              <ordinal>11</ordinal>
+              <family>promo_actions.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Store</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Store (promo_lift_by_store_day.csv)]</local-name>
+              <parent-name>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</parent-name>
+              <remote-alias>Store</remote-alias>
+              <ordinal>12</ordinal>
+              <family>promo_lift_by_store_day.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date (promo_lift_by_store_day.csv)]</local-name>
+              <parent-name>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>13</ordinal>
+              <family>promo_lift_by_store_day.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>42</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pred_baseline</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pred_baseline]</local-name>
+              <parent-name>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</parent-name>
+              <remote-alias>pred_baseline</remote-alias>
+              <ordinal>14</ordinal>
+              <family>promo_lift_by_store_day.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>942</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>pred_with_promo</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[pred_with_promo]</local-name>
+              <parent-name>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</parent-name>
+              <remote-alias>pred_with_promo</remote-alias>
+              <ordinal>15</ordinal>
+              <family>promo_lift_by_store_day.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>942</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lift_abs</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[lift_abs]</local-name>
+              <parent-name>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</parent-name>
+              <remote-alias>lift_abs</remote-alias>
+              <ordinal>16</ordinal>
+              <family>promo_lift_by_store_day.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>568</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>lift_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[lift_pct]</local-name>
+              <parent-name>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</parent-name>
+              <remote-alias>lift_pct</remote-alias>
+              <ordinal>17</ordinal>
+              <family>promo_lift_by_store_day.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>568</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='promo_actions.csv' id='promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A'>
+            <properties context=''>
+              <relation connection='textscan.1q702t71v7jn9v16xlcre05qqprx' name='promo_actions.csv' table='[promo_actions#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='integer' name='Store' ordinal='0' />
+                  <column datatype='integer' name='days' ordinal='1' />
+                  <column datatype='real' name='lift_total' ordinal='2' />
+                  <column datatype='real' name='lift_pct_mean' ordinal='3' />
+                  <column datatype='real' name='baseline_sum' ordinal='4' />
+                  <column datatype='integer' name='neg_days' ordinal='5' />
+                  <column datatype='real' name='weighted_pct' ordinal='6' />
+                  <column datatype='string' name='recommendation' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A' table='[Extract].[promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A]' type='table' />
+            </properties>
+          </object>
+          <object caption='promo_lift_by_store_day.csv' id='promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE'>
+            <properties context=''>
+              <relation connection='textscan.1thvqw914vv3dv16912w30zsbchy' name='promo_lift_by_store_day.csv' table='[promo_lift_by_store_day#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='integer' name='Store' ordinal='0' />
+                  <column datatype='date' name='Date' ordinal='1' />
+                  <column datatype='real' name='pred_baseline' ordinal='2' />
+                  <column datatype='real' name='pred_with_promo' ordinal='3' />
+                  <column datatype='real' name='lift_abs' ordinal='4' />
+                  <column datatype='real' name='lift_pct' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE' table='[Extract].[promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE]' type='table' />
+            </properties>
+          </object>
+          <object caption='test_predictions.csv' id='test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839'>
+            <properties context=''>
+              <relation connection='textscan.1thvqw914vv3dv16912w30zsbchy' name='test_predictions.csv' table='[test_predictions#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='integer' name='Store' ordinal='0' />
+                  <column datatype='date' name='Date' ordinal='1' />
+                  <column datatype='real' name='y_true' ordinal='2' />
+                  <column datatype='real' name='y_pred' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839' table='[Extract].[test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Store]' />
+              <expression op='[Store (promo_actions.csv)]' />
+            </expression>
+            <first-end-point object-id='test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839' />
+            <second-end-point object-id='promo_actions.csv_5BA4441281EB4B4F942481852A5A0F5A' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Date]' />
+              <expression op='[Date (promo_lift_by_store_day.csv)]' />
+            </expression>
+            <first-end-point object-id='test_predictions.csv_DA393BDE997843DEAC686F6E3A40B839' />
+            <second-end-point object-id='promo_lift_by_store_day.csv_E31E5A1186914E9AA054C457ECC6C7FE' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_9ADB73D2401B4A33BC28604251AADBE8]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Promo Impact (Baseline vs With Promo)' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Measure Names' />
+        <param name='target' value='Promo Impact (Baseline vs With Promo)' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Forecast Viewer (Actual vs Pred)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='test_predictions' name='federated.0b71w4t0lfd78114jfuvm1ahnn0y' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0b71w4t0lfd78114jfuvm1ahnn0y'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Store]' role='measure' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Store]' derivation='None' name='[none:Store:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[y_pred]' derivation='Sum' name='[sum:y_pred:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[y_true]' derivation='Sum' name='[sum:y_true:qk]' pivot='key' type='quantitative' />
+            <column caption='Y Pred' datatype='real' name='[y_pred]' role='measure' type='quantitative' />
+            <column caption='Y True' datatype='real' name='[y_true]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0b71w4t0lfd78114jfuvm1ahnn0y].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0b71w4t0lfd78114jfuvm1ahnn0y].[sum:y_pred:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0b71w4t0lfd78114jfuvm1ahnn0y].[sum:y_true:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.0b71w4t0lfd78114jfuvm1ahnn0y].[none:Store:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>1115</max>
+          </filter>
+          <slices>
+            <column>[federated.0b71w4t0lfd78114jfuvm1ahnn0y].[:Measure Names]</column>
+            <column>[federated.0b71w4t0lfd78114jfuvm1ahnn0y].[none:Store:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575'>Date:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.0b71w4t0lfd78114jfuvm1ahnn0y].[none:Date:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Benton Sans Book'>SUM(y_true) </run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Benton Sans Book'>SUM(y_pred) </run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' fontname='Benton Sans Book'>Abs Error</run>
+                <run fontcolor='#000000' fontname='Benton Sans Book'> = ABS(SUM([y_true]) - SUM([y_Pred])) </run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' fontname='Benton Sans Book'>% Error</run>
+                <run fontcolor='#000000' fontname='Benton Sans Book'> = ABS(SUM([y_true]) - SUM([y_pred])) / NULLIF(SUM([y_true]),0) </run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.0b71w4t0lfd78114jfuvm1ahnn0y].[Multiple Values]</rows>
+        <cols>[federated.0b71w4t0lfd78114jfuvm1ahnn0y].[none:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{245CD598-EE64-4280-BAB2-27943021CDD1}' />
+    </worksheet>
+    <worksheet name='Overall RMSPE — Test: 21/6 - 31/7'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='overall_summary' name='federated.0g2uilu0jq6p2h18su8n607rqvdi' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0g2uilu0jq6p2h18su8n607rqvdi'>
+            <column-instance column='[__tableau_internal_object_id__].[overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F:qk]' pivot='key' type='quantitative' />
+            <column caption='overall_summary.csv' datatype='table' name='[__tableau_internal_object_id__].[overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F]' role='measure' type='quantitative' />
+            <column-instance column='[test_end]' derivation='Attribute' name='[attr:test_end:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[test_start]' derivation='Attribute' name='[attr:test_start:ok]' pivot='key' type='ordinal' />
+            <column caption='Mape' datatype='real' name='[mape]' role='measure' type='quantitative' />
+            <column caption='Rmse' datatype='real' name='[rmse]' role='measure' type='quantitative' />
+            <column caption='Rmspe' datatype='real' name='[rmspe]' role='measure' type='quantitative' />
+            <column-instance column='[mape]' derivation='Sum' name='[sum:mape:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rmse]' derivation='Sum' name='[sum:rmse:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rmspe]' derivation='Sum' name='[sum:rmspe:qk]' pivot='key' type='quantitative' />
+            <column caption='Test End' datatype='date' name='[test_end]' role='dimension' type='ordinal' />
+            <column caption='Test Start' datatype='date' name='[test_start]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0g2uilu0jq6p2h18su8n607rqvdi].[:Measure Names]'>
+            <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0g2uilu0jq6p2h18su8n607rqvdi].[sum:rmspe:qk]&quot;' user:op='manual' />
+          </filter>
+          <manual-sort column='[federated.0g2uilu0jq6p2h18su8n607rqvdi].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0g2uilu0jq6p2h18su8n607rqvdi].[sum:rmspe:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0g2uilu0jq6p2h18su8n607rqvdi].[__tableau_internal_object_id__].[cnt:overall_summary.csv_FDD60CB22CCF4A9EA1F3936C43464A2F:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0g2uilu0jq6p2h18su8n607rqvdi].[sum:mape:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0g2uilu0jq6p2h18su8n607rqvdi].[sum:rmse:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0g2uilu0jq6p2h18su8n607rqvdi].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <tooltip column='[federated.0g2uilu0jq6p2h18su8n607rqvdi].[attr:test_start:ok]' />
+              <tooltip column='[federated.0g2uilu0jq6p2h18su8n607rqvdi].[attr:test_end:ok]' />
+              <tooltip column='[federated.0g2uilu0jq6p2h18su8n607rqvdi].[sum:rmse:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0g2uilu0jq6p2h18su8n607rqvdi].[Multiple Values]</rows>
+        <cols>[federated.0g2uilu0jq6p2h18su8n607rqvdi].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{AE9BADD9-FB91-460B-8F2B-EABA493B79C1}' />
+    </worksheet>
+    <worksheet name='Promo Impact (Baseline vs With Promo)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='promo_lift_by_store_day' name='federated.147kfrc02sg14d12kqv0e09qb4cw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.147kfrc02sg14d12kqv0e09qb4cw'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Store]' role='measure' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Store]' derivation='None' name='[none:Store:qk]' pivot='key' type='quantitative' />
+            <column caption='Pred Baseline' datatype='real' name='[pred_baseline]' role='measure' type='quantitative' />
+            <column caption='Pred With Promo' datatype='real' name='[pred_with_promo]' role='measure' type='quantitative' />
+            <column-instance column='[pred_baseline]' derivation='Sum' name='[sum:pred_baseline:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[pred_with_promo]' derivation='Sum' name='[sum:pred_with_promo:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.147kfrc02sg14d12kqv0e09qb4cw].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.147kfrc02sg14d12kqv0e09qb4cw].[sum:pred_baseline:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.147kfrc02sg14d12kqv0e09qb4cw].[sum:pred_with_promo:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.147kfrc02sg14d12kqv0e09qb4cw].[none:Store:qk]' included-values='in-range'>
+            <min>211</min>
+            <max>1114</max>
+          </filter>
+          <slices>
+            <column>[federated.147kfrc02sg14d12kqv0e09qb4cw].[:Measure Names]</column>
+            <column>[federated.147kfrc02sg14d12kqv0e09qb4cw].[none:Store:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.147kfrc02sg14d12kqv0e09qb4cw].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.147kfrc02sg14d12kqv0e09qb4cw].[Multiple Values]</rows>
+        <cols>[federated.147kfrc02sg14d12kqv0e09qb4cw].[none:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{05611395-C08C-4606-8B3D-2BB7C7C36BBB}' />
+    </worksheet>
+    <worksheet name='RMSPE by Store'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='by_store_compare' name='federated.1pc5h110qr29x41cq6eex1yjlngi' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1pc5h110qr29x41cq6eex1yjlngi'>
+            <column datatype='integer' name='[Store]' role='measure' type='quantitative' />
+            <column-instance column='[winner]' derivation='None' name='[none:winner:nk]' pivot='key' type='nominal' />
+            <column caption='Rmspe Lgbm' datatype='real' name='[rmspe_lgbm]' role='measure' type='quantitative' />
+            <column caption='Rmspe Prophet' datatype='real' name='[rmspe_prophet]' role='measure' type='quantitative' />
+            <column-instance column='[Store]' derivation='Sum' name='[sum:Store:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rmspe_lgbm]' derivation='Sum' name='[sum:rmspe_lgbm:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rmspe_prophet]' derivation='Sum' name='[sum:rmspe_prophet:qk]' pivot='key' type='quantitative' />
+            <column caption='Winner' datatype='string' name='[winner]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1pc5h110qr29x41cq6eex1yjlngi].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pc5h110qr29x41cq6eex1yjlngi].[sum:rmspe_lgbm:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1pc5h110qr29x41cq6eex1yjlngi].[sum:rmspe_prophet:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1pc5h110qr29x41cq6eex1yjlngi].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1pc5h110qr29x41cq6eex1yjlngi].[none:winner:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1pc5h110qr29x41cq6eex1yjlngi].[sum:Store:qk]</rows>
+        <cols>[federated.1pc5h110qr29x41cq6eex1yjlngi].[Multiple Values]</cols>
+      </table>
+      <simple-id uuid='{EB69988C-A9D5-4CA4-9ADD-C9E97989BB4C}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='156'>
+    <window class='worksheet' maximized='true' name='Overall RMSPE — Test: 21/6 - 31/7'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2D75EA7D-050D-4E45-BBF9-60E6B74ECB5A}' />
+    </window>
+    <window class='worksheet' name='Forecast Viewer (Actual vs Pred)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0b71w4t0lfd78114jfuvm1ahnn0y].[none:Store:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6782B4BC-F630-480E-A5ED-CB8BFD7D6004}' />
+    </window>
+    <window class='worksheet' name='Promo Impact (Baseline vs With Promo)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.147kfrc02sg14d12kqv0e09qb4cw].[none:Store:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.147kfrc02sg14d12kqv0e09qb4cw].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{08DA94AB-9AE3-4EC0-B090-9B947C8C3C9B}' />
+    </window>
+    <window class='worksheet' name='RMSPE by Store'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1pc5h110qr29x41cq6eex1yjlngi].[none:winner:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C267C6BC-38B7-4432-ACCB-32EB17414671}' />
+    </window>
+  </windows>
+</workbook>
