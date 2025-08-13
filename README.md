@@ -26,11 +26,8 @@ Color theme: Rossmann Red `#E6001A` (Actual) and Teal `#007F7F` (Predicted).
 
 ## Screenshots
 
-> If these images don’t render on GitHub, copy the matching PNGs into the paths below or update the links.
-
-![Overall RMSPE](reports/figures/model_compare_overall_rmspe_bar.png)
-![Portfolio Actual vs Pred](reports/tableau/plots/portfolio_agg_daily_actual_vs_pred.png)
-![Top 12 Promo Lift](reports/tableau/plots/promo_top12_lift.png)
+![Rossmann Forecast & Promo Impact](reports/figures/db1)
+![Rossmann Optimization & Competition ](reports/db2)
 
 ---
 
